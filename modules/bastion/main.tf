@@ -19,4 +19,5 @@ module "droplet" {
   region             = var.region
   private_networking = var.private_networking
   monitoring         = var.monitoring
+  volumes            = var.volumes
 }

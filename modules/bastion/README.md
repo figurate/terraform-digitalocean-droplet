@@ -24,6 +24,7 @@ No requirements.
 | tags | A list of tags attached to the droplet | `list(string)` | <pre>[<br>  "bastion"<br>]</pre> | no |
 | template\_type | A predefined template type used to configure user data, etc. | `string` | `"bastion"` | no |
 | timezone | Configured timezone for the droplet instance | `any` | n/a | yes |
+| volumes | A list of volumes to attach to the droplet | `list` | `[]` | no |
 
 ## Outputs
 

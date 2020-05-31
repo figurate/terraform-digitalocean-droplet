@@ -28,6 +28,7 @@ No requirements.
 | tags | A list of tags attached to the droplet | `list(string)` | `[]` | no |
 | template\_context | Additional contextual values relevant to the template user data | `map(string)` | `{}` | no |
 | template\_type | A predefined template type used to configure user data, etc. | `any` | n/a | yes |
+| volumes | A list of volumes to attach to the droplet | `list` | `[]` | no |
 
 ## Outputs
 

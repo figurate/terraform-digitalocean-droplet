@@ -41,3 +41,8 @@ variable "monitoring" {
   description = "Enable monitoring"
   default     = true
 }
+
+variable "volumes" {
+  description = "A list of volumes to attach to the droplet"
+  default     = []
+}
