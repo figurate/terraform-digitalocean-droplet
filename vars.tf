@@ -31,3 +31,13 @@ variable "size" {
 variable "region" {
   description = "Digital Ocean region for the droplet instance"
 }
+
+variable "private_networking" {
+  description = "Enable private networking"
+  default     = true
+}
+
+variable "monitoring" {
+  description = "Enable monitoring"
+  default     = true
+}
