@@ -20,4 +20,5 @@ module "droplet" {
   private_networking = var.private_networking
   monitoring         = var.monitoring
   volumes            = var.volumes
+  floating_ips       = var.floating_ips
 }

@@ -10,6 +10,11 @@ data "digitalocean_volume" "volumes" {
   name  = var.volumes[count.index]
 }
 
+data "digitalocean_floating_ip" "floating_ips" {
+  count      = length(var.floating_ips)
+  ip_address = var.floating_ips[count.index]
+}
+
 resource "digitalocean_droplet" "droplet" {
   name               = var.name
   tags               = var.tags
@@ -25,4 +30,10 @@ resource "digitalocean_volume_attachment" volumes {
   count      = length(var.volumes)
   droplet_id = digitalocean_droplet.droplet.id
   volume_id  = data.digitalocean_volume.volumes[count.index].id
+}
+
+resource "digitalocean_floating_ip_assignment" "floating_ips" {
+  count      = length(var.floating_ips)
+  droplet_id = digitalocean_droplet.droplet.id
+  ip_address = data.digitalocean_floating_ip.floating_ips[count.index].ip_address
 }

@@ -19,6 +19,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| floating\_ips | A list of floating IP addresses to attach to the droplet | `list` | `[]` | no |
 | image | Name of the Droplet image | `string` | `"ubuntu-18-04-x64"` | no |
 | monitoring | Enable monitoring | `bool` | `true` | no |
 | name | Name of the droplet instance | `any` | n/a | yes |

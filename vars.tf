@@ -46,3 +46,8 @@ variable "volumes" {
   description = "A list of volumes to attach to the droplet"
   default     = []
 }
+
+variable "floating_ips" {
+  description = "A list of floating IP addresses to attach to the droplet"
+  default     = []
+}
