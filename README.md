@@ -1,3 +1,9 @@
+# ![Digital Ocean](do-logo.png) Droplet
+
+Purpose: Provision droplets in Digital Ocean.
+
+Rationale: Provide templates for Digital Ocean droplets.
+
 ## Requirements
 
 No requirements.

@@ -1,3 +1,10 @@
+/**
+ * # ![Digital Ocean](do-logo.png) Droplet
+ *
+ * Purpose: Provision droplets in Digital Ocean.
+ *
+ * Rationale: Provide templates for Digital Ocean droplets.
+ */
 resource "digitalocean_droplet" "droplet" {
   name      = var.name
   tags      = var.tags
