@@ -1,5 +1,7 @@
 # ![Digital Ocean](do-logo.png) Droplet
 
+[![CI](https://github.com/figurate/terraform-digitalocean-droplet/actions/workflows/main.yml/badge.svg)](https://github.com/figurate/terraform-digitalocean-droplet/actions/workflows/main.yml)
+
 Purpose: Provision droplets in Digital Ocean.
 
 Rationale: Provide templates for Digital Ocean droplets.
