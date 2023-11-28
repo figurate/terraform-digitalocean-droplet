@@ -11,8 +11,7 @@ clean:
 	rm -rf .terraform/
 
 validate:
-	$(TERRAFORM) init -upgrade && $(TERRAFORM) validate && \
-		$(TERRAFORM) -chdir=modules/bastion init -upgrade && $(TERRAFORM) -chdir=modules/bastion validate
+	$(TERRAFORM) init  && $(TERRAFORM) validate
 
 test: validate
 	$(CHECKOV) -d /work
@@ -26,8 +25,7 @@ docs: diagram
 		$(TERRAFORM_DOCS) markdown ./modules/bastion >./modules/bastion/README.md
 
 format:
-	$(TERRAFORM) fmt -list=true ./ && \
-		$(TERRAFORM) fmt -list=true ./modules/bastion
+	$(TERRAFORM) fmt -list=true -recursive
 
 release: test
 	git tag $(VERSION) && git push --tags
